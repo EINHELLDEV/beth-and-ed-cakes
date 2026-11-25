@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="es-VE">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Beth &amp; Ed Cake's | Repostería artesanal con calor de hogar</title>
+<meta name="description" content="Beth &amp; Ed Cake's: repostería artesanal. Tortas de tres leches, chocolate, arequipe, fresas con chantilly, melocotones con crema, yogures y postres en vasos. Pide por WhatsApp." />
+<meta name="theme-color" content="#FDF4F7" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Beth &amp; Ed Cake's | Repostería artesanal" />
+<meta property="og:description" content="Tortas clásicas y postres en vasos, hechos a mano con calor de hogar. Pide por WhatsApp: 0412 365 0270." />
+<meta property="og:image" content="assets/img/hero-principal.jpg" />
+<link rel="icon" type="image/png" href="favicon.png" />
+
+<!-- Marca JS activo: si main.js no llegara a cargar, la web se muestra igual -->
+<script>
+  document.documentElement.classList.add('js');
+  window.setTimeout(function () {
+    if (!window.revealListo) document.documentElement.classList.remove('js');
+  }, 4000);
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="assets/css/tailwind.css" />
+
+</head>
+
+<body class="bg-rosa-50 text-tinta-900 font-sans antialiased selection:bg-rosa-200 selection:text-tinta-900">
+
+<a href="#contenido" class="saltar-enlace">Saltar al contenido principal</a>
+
+<!-- ============ ENCABEZADO ============ -->
+<header id="encabezado" class="fijo-superior">
+  <div class="mx-auto flex h-20 max-w-6xl items-center justify-between gap-4 px-5 sm:px-8">
+
+    <a href="#inicio" class="flex shrink-0 items-center gap-3" aria-label="Beth &amp; Ed Cake's, ir al inicio">
+      <img src="assets/img/logo-beth-ed.png" alt="Logo de Beth &amp; Ed Cake's" class="h-14 w-14 object-contain" width="56" height="56" />
+      <span class="hidden font-display text-xl leading-tight text-tinta-900 sm:block">
+        Beth &amp; Ed Cake's
+        <span class="block font-script text-lg text-rosa-600">repostería artesanal</span>
+      </span>
+    </a>
+
+    <nav class="hidden items-center gap-1 md:flex" aria-label="Navegación principal">
+      <a href="#inicio" class="enlace-nav" data-seccion="inicio">Inicio</a>
+      <a href="#tortas" class="enlace-nav" data-seccion="tortas">Tortas</a>
+      <a href="#testimonios" class="enlace-nav" data-seccion="testimonios">Testimonios</a>
+      <a href="#contacto" class="enlace-nav" data-seccion="contacto">Contacto</a>
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <a href="https://wa.me/584123650270?text=Hola%20Beth%20%26%20Ed%20Cake%27s%2C%20quisiera%20hacer%20un%20pedido" target="_blank" rel="noopener" class="boton boton-rosa hidden sm:inline-flex">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
+        </svg>
+        WhatsApp
+      </a>
+
+      <button type="button" id="boton-menu" class="boton-icono md:hidden" aria-expanded="false" aria-controls="menu-movil" aria-label="Abrir menú">
+        <svg id="icono-menu" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+        <svg id="icono-cerrar" class="h-6 w-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Menú móvil -->
+  <div id="menu-movil" class="menu-movil md:hidden" hidden>
+    <nav class="flex flex-col gap-1 px-5 pb-6 pt-2" aria-label="Navegación móvil">
+      <a href="#inicio" class="enlace-nav-movil">Inicio</a>
+      <a href="#tortas" class="enlace-nav-movil">Tortas</a>
+      <a href="#testimonios" class="enlace-nav-movil">Testimonios</a>
+      <a href="#contacto" class="enlace-nav-movil">Contacto</a>
+      <a href="https://wa.me/584123650270?text=Hola%20Beth%20%26%20Ed%20Cake%27s%2C%20quisiera%20hacer%20un%20pedido" target="_blank" rel="noopener" class="boton boton-rosa mt-3 w-full justify-center">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
+        </svg>
+        Escríbenos por WhatsApp
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+
+  <!-- ============ HERO ============ -->
+  <section id="inicio" class="seccion-hero">
+    <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 py-14 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:py-20">
+
+      <div class="reveal">
+        <p class="etiqueta">
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8" />
+            <path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1" />
+            <path d="M2 21h20" />
+            <path d="M7 8v2M12 8v2M17 8v2" />
+          </svg>
+          Repostería artesanal
+        </p>
+
+        <h1 class="mt-5 font-display text-4xl leading-[1.08] text-tinta-900 sm:text-5xl lg:text-6xl">
+          Beth &amp; Ed Cake's
+          <span class="mt-2 block font-script text-4xl text-rosa-600 sm:text-5xl">con calor de hogar</span>
+        </h1>
+
+        <p class="mt-6 max-w-xl text-lg leading-relaxed text-tinta-700">
+          Tortas clásicas de toda la vida y postres en vasos, hechos a mano y con calma para que
+          tu celebración se sienta como en casa.
+        </p>
+
+        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+          <a href="https://wa.me/584123650270?text=Hola%20Beth%20%26%20Ed%20Cake%27s%2C%20quisiera%20hacer%20un%20pedido" target="_blank" rel="noopener" class="boton boton-rosa">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+            Escríbenos por WhatsApp
+          </a>
+          <a href="#tortas" class="boton boton-linea">
+            Ver la pasarela de tortas
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+
+        <ul class="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4 text-sm text-tinta-600">
+          <li class="flex items-center gap-2">
+            <svg class="h-5 w-5 text-rosa-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" />
+            </svg>
+            Lun a vie 9am – 6pm · Sáb 10am – 4pm
+          </li>
+          <li class="flex items-center gap-2">
+            <svg class="h-5 w-5 text-rosa-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg>
+            Hechas a mano, sin local físico
+          </li>
+          <li class="flex items-center gap-2">
+            <svg class="h-5 w-5 text-rosa-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6L9 17l-5-5" />
+            </svg>
+            Pedidos por WhatsApp
+          </li>
+        </ul>
+      </div>
+
+      <!-- Collage de fotos -->
+      <div class="collage reveal reveal-tarde">
+        <figure class="collage-principal">
+          <img src="assets/img/hero-principal.jpg" alt="Torta de fresas con crema decorada con fresas frescas" width="883" height="1024" fetchpriority="high" decoding="async" />
+        </figure>
+        <figure class="collage-secundario collage-a">
+          <img src="assets/img/hero-2.jpg" alt="Postres artesanales operandos sobre una mesa" width="1023" height="704" decoding="async" />
+        </figure>
+        <figure class="collage-secundario collage-b">
+          <img src="assets/img/hero-3.jpg" alt="Postre en vaso con fresas y menta" width="960" height="1434" decoding="async" />
+        </figure>
+        <figure class="collage-secundario collage-c">
+          <img src="assets/img/hero-4.jpg" alt="Pequeñas tortas de fresas con crema al estilo Colonia Tovar" width="1024" height="683" decoding="async" />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PASARELA DE TORTAS ============ -->
+  <section id="tortas" class="seccion">
+    <div class="mx-auto max-w-6xl px-5 sm:px-8">
+      <div class="reveal mx-auto max-w-2xl text-center">
+        <p class="etiqueta justify-center">
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8" />
+            <path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1" />
+            <path d="M2 21h20" />
+            <path d="M7 8v2M12 8v2M17 8v2" />
+          </svg>
+          Nuestra pasarela
+        </p>
+        <h2 class="mt-4 font-display text-3xl leading-tight text-tinta-900 sm:text-4xl">Las tortas de siempre, en nuestra versión</h2>
+        <p class="mt-4 text-tinta-600">
+          Las que nunca faltan en una celebración Venezuelan: tres leches, chocolate, arequipe,
+          fresas con chantilly, melocotones con crema y postres servidos en vaso.
+        </p>
+      </div>
+
+      <!-- Filtros -->
+      <div class="reveal mt-10 flex flex-wrap justify-center gap-2" role="group" aria-label="Filtrar productos por categoría">
+        <button type="button" class="chip chip-activo" data-filtro="todos" aria-pressed="true">Todos</button>
+        <button type="button" class="chip" data-filtro="tortas" aria-pressed="false">Tortas</button>
+        <button type="button" class="chip" data-filtro="yogures" aria-pressed="false">Yogures</button>
+        <button type="button" class="chip" data-filtro="vasos" aria-pressed="false">Postres en vasos</button>
+      </div>
+
+      <ul id="galeria-tortas" class="mt-10 grid grid-cols-2 gap-4 sm:gap-5 md:grid-cols-3 xl:grid-cols-4">
+        <li class="tarjeta-producto reveal" data-categoria="tortas">
+          <button type="button" class="grupo w-full text-left" data-lupa="assets/img/torta-tres-leches.jpg" data-alt="Torta tres leches con crema y caramelo" data-nombre="Torta tres leches" data-detalle="Bizcocho esponjoso bañado en leche condensada, leche evaporada y leche de vaca.">
+            <span class="marco-imagen">
+              <img src="assets/img/torta-tres-leches.jpg" alt="Torta tres leches con crema y caramelo" width="1200" height="900" loading="lazy" decoding="async" />
+            </span>
+            <span class="mt-3 block font-display text-lg leading-snug text-tinta-900">Torta tres leches</span>
+            <span class="mt-1 block text-sm text-tinta-600">Leche condensada, evaporada y de vaca</span>
+            <span class="etiqueta-producto">Tortas</span>
+          </button>
+        </li>
+
+        <li class="tarjeta-producto reveal" data-categoria="tortas">
+          <button type="button" class="grupo w-full text-left" data-lupa="assets/img/torta-tres-leches-2.jpg" data-alt="Torta tres leches entera decorada con frutas" data-nombre="Torta tres leches" data-detalle="Versión completa para fiestas, coronada con frutas de temporada.">
+            <span class="marco-imagen">
+              <img src="assets/img/torta-tres-leches-2.jpg" alt="Torta tres leches entera decorada con frutas" width="1024" height="768" loading="lazy" decoding="async" />
+            </span>
+            <span class="mt-3 block font-display text-lg leading-snug text-tinta-900">Torta tres leches</span>
+            <span class="mt-1 block text-sm text-tinta-600">Para fiestas y cumpleaños</span>
+            <span class="etiqueta-producto">Tortas</span>
+          </button>
+        </li>
+
+        <li class="tarjeta-producto reveal" data-categoria="tortas">
+          <button type="button" class="grupo w-full text-left" data-lupa="assets/img/torta-chocolate.jpg" data-alt="Torta de chocolate en capas de bizcocho" data-nombre="Torta de chocolate" data-detalle="Bizcocho de cacao intenso con cobertura de chocolate y crema.">
+            <span class="marco-imagen">
+              <img src="assets/img/torta-chocolate.jpg" alt="Torta de chocolate en capas sobre un plato" width="1024" height="683" loading="lazy" decoding="async" />
+            </span>
+            <span class="mt-3 block font-display text-lg leading-snug text-tinta-900">Torta de chocolate</span>
+            <span class="mt-1 block text-sm text-tinta-600">Bizcocho de cacao con cobertura</span>
+            <span class="etiqueta-producto">Tortas</span>
+          </button>
+        </li>
+
+        <li class="tarjeta-producto reveal" data-categoria="tortas">
+          <button type="button" class="grupo w-full text-left" data-lupa="assets/img/torta-chocolate-2.jpg" data-alt="Torta de chocolate con relleno de crema" data-nombre="Torta de chocolate" data-detalle="Capas de bizcocho y crema, con chocolate fundido.">
+            <span class="marco-imagen">
+              <img src="assets/img/torta-chocolate-2.jpg" alt="Torta de chocolate con relleno de crema" width="1024" height="655" loading="lazy" decoding="async" />
+            </span>
+            <span class="mt-3 block font-display text-lg leading-snug text-tinta-900">Torta de chocolate</span>
+            <span class="mt-1 block text-sm text-tinta-600">Con relleno de crema</span>
+            <span class="etiqueta-producto">Tortas</span>
+          </button>
+        </li>
+
+        <li class="tarjeta-producto reveal" data-categoria="tortas">
+          <button type="button" class="grupo w-full text-left" data-lupa="assets/img/torta-arequipe.jpg" data-alt="Torta de arequipe con cobertura de caramelo" data-nombre="Torta de arequipe" data-detalle="Bizcocho de arequipe con cobertura de caramelo y relleno dulce.">
+            <span class="marco-imagen">
+              <img src="assets/img/torta-arequipe.jpg" alt="Torta de arequipe con cobertura de caramelo" width="1024" height="768" loading="lazy" decoding="async" />
+            </span>
+            <span class="mt-3 block font-display text-lg leading-snug text-tinta-900">Torta de arequipe</span>
+            <span class="mt-1 block text-sm text-tinta-600">Caramelo y relleno dulce</span>
+            <span class="etiqueta-producto">Tortas</span>
+          </button>
+        </li>
+
+        <li class="tarjeta-producto reveal" data-categoria="tortas">
+          <button type="button" class="grupo w-full text-left" data-lupa="assets/img/torta-arequipe-2.jpg" data-alt="Torta de arequipe entera con cobertura de caramelo" data-nombre="Torta de arequipe" data-detalle="La clásica de arequipe, lista para compartir.">
+            <span class="marco-imagen">
+              <img src="assets/img/torta-arequipe-2.jpg" alt="Torta de arequipe entera con cobertura de caramelo" width="1024" height="768" loading="lazy" decoding="async" />
+            </span>
+            <span class="mt-3 block font-display text-lg leading-snug text-tinta-900">Torta de arequipe</span>
+            <span class="mt-1 block text-sm text-tinta-600">La clásica de la casa</span>
+            <span class="etiqueta-producto">Tortas</span>
+          </button>
+        </li>
+
+        <li class="tarjeta-producto reveal" data-categoria="tortas">
+          <button type="button" class="grupo w-full text-left" data-lupa="assets/img/torta-fresas-chantilly.jpg" data-alt="Torta de fresas con chantilly" data-nombre="Torta de fresas con chantilly" data-detalle="Fresas frescas con chantilly y crema sobre bizcocho esponjoso.">
+            <span class="marco-imagen">
+              <img src="assets/img/torta-fresas-chantilly.jpg" alt="Torta de fresas con chantilly y fresas frescas" width="1024" height="811" loading="lazy" decoding="async" />
+            </span>
+            <span class="mt-3 block font-display text-lg leading-snug text-tinta-900">Torta de fresas con chantilly</span>
+            <span class="mt-1 block text-sm text-tinta-600">Fresas, chantilly y bizcocho</span>
+            <span class="etiqueta-producto">Tortas</span>
+          </button>
+        </li>
+
+        <li class="tarjeta-producto reveal" data-categoria="tortas">
+          <button type="button" class="grupo w-full text-left" data-lupa="assets/img/torta-fresas-colonia-tovar.jpg" data-alt="Torta de fresas con crema al estilo Colonia Tovar" data-nombre="Fresas con crema estilo Colonia Tovar" data-detalle="Bizcocho blanco, crema de leche y fresas: el sabor de Colonia Tovar.">
+            <span class="marco-imagen">
+              <img src="assets/img/torta-fresas-colonia-tovar.jpg" alt="Torta de fresas con crema al estilo Colonia Tovar" width="1024" height="678" loading="lazy" decoding="async" />
+            </span>
+            <span class="mt-3 block font-display text-lg leading-snug text-tinta-900">Fresas con crema</span>
+            <span class="mt-1 block text-sm text-tinta-600">Estilo Colonia Tovar</span>
+            <span class="etiqueta-producto">Tortas</span>
+          </button>
+        </li>
+
+        <li class="tarjeta-producto reveal" data-categoria="tortas">
+          <button type="button" class="grupo w-full text-left" data-lupa="assets/img/torta-melocotones.jpg" data-alt="Torta de melocotones con crema" data-nombre="Torta de melocotones con crema" data-detalle="Melocotones maduros sobre bizcocho con crema.">
+            <span class="marco-imagen">
+              <img src="assets/img/torta-melocotones.jpg" alt="Torta de melocotones con crema" width="1024" height="632" loading="lazy" decoding="async" />
+            </span>
+            <span class="mt-3 block font-display text-lg leading-snug text-tinta-900">Torta de melocotones</span>
+            <span class="mt-1 block text-sm text-tinta-600">Melocotones con crema</span>
+            <span class="etiqueta-producto">Tortas</span>
+          </button>
+        </li>
+
+        <li class="tarjeta-producto reveal" data-categoria="yogures">
+          <button type="button" class="grupo w-full text-left" data-lupa="assets/img/yogures.jpg" data-alt="Yogures con frutos rojos en vasos" data-nombre="Yogures con frutos rojos" data-detalle="Yogurt cremoso con frutos rojos y granola, servido en vaso.">
+            <span class="marco-imagen">
+              <img src="assets/img/yogures.jpg" alt="Yogures con frutos rojos en vasos" width="1024" height="683" loading="lazy" decoding="async" />
+            </span>
+            <span class="mt-3 block font-display text-lg leading-snug text-tinta-900">Yogures con frutos rojos</span>
+            <span class="mt-1 block text-sm text-tinta-600">Con granola y fruta fresca</span>
+            <span class="etiqueta-producto">Yogures</span>
+          </button>
+        </li>
+
+        <li class="tarjeta-producto reveal" data-categoria="yogures">
+          <button type="button" class="grupo w-full text-left" data-lupa="assets/img/yogures-2.jpg" alt="Yogurt en vaso con crema y toppings" data-nombre="Yogurt en vaso" data-detalle="Yogurt, crema y toppings en capas.">
+            <span class="marco-imagen">
+              <img src="assets/img/yogures-2.jpg" alt="Yogurt en vaso con crema y toppings" width="1024" height="750" loading="lazy" decoding="async" />
+            </span>
+            <span class="mt-3 block font-display text-lg leading-snug text-tinta-900">Yogurt en vaso</span>
+            <span class="mt-1 block text-sm text-tinta-600">Con crema y toppings</span>
+            <span class="etiqueta-producto">Yogures</span>
+          </button>
+        </li>
+
+        <li class="tarjeta-producto reveal" data-categoria="vasos">
+          <button type="button" class="grupo w-full text-left" data-lupa="assets/img/postres-en-vasos.jpg" data-alt="Postre en vaso con frutos rojos" data-nombre="Postres en vasos" data-detalle="Postres servidos en vaso, con frutas y crema.">
+            <span class="marco-imagen">
+              <img src="assets/img/postres-en-vasos.jpg" alt="Postre en vaso con frutos rojos" width="1024" height="683" loading="lazy" decoding="async" />
+            </span>
+            <span class="mt-3 block font-display text-lg leading-snug text-tinta-900">Postres en vasos</span>
+            <span class="mt-1 block text-sm text-tinta-600">Variados, para la mesa</span>
+            <span class="etiqueta-producto">Postres en vasos</span>
+          </button>
+        </li>
+      </ul>
+
+      <p id="galeria-vacia" class="mt-10 hidden text-center text-tinta-600">No hay productos en esta categoría por ahora.</p>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIOS ============ -->
+  <section id="testimonios" class="seccion seccion-rosa">
+    <div class="mx-auto max-w-6xl px-5 sm:px-8">
+      <div class="reveal mx-auto max-w-2xl text-center">
+        <p class="etiqueta justify-center">
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+          </svg>
+          Lo que dicen
+        </p>
+        <h2 class="mt-4 font-display text-3xl leading-tight text-tinta-900 sm:text-4xl">Volver a pedirlos es la mejor reseña</h2>
+        <p class="mt-4 text-tinta-600">
+          Reseñas de muestra: en cuanto queramos, las cambiamos por los comentarios reales de nuestros clientes.
+        </p>
+      </div>
+
+      <div class="reveal mt-10">
+        <ul id="pista-testimonios" class="pista-testimonios" aria-label="Testimonios de clientes">
+          <li class="tarjeta-testimonio">
+            <div class="flex gap-1 text-rosa-500" aria-label="5 de 5 estrellas">
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+            </div>
+            <p class="mt-4 text-tinta-700">"La torta de tres leches quedó igual que la que hacía mi abuela. Húmeda, dulce y sin que se desarmara al cortarla. Ya pedí tres veces."</p>
+            <footer class="mt-5 flex items-center gap-3">
+              <span class="inicial" aria-hidden="true">Y</span>
+              <span>
+                <span class="block font-semibold text-tinta-900">Yolanda Márquez</span>
+                <span class="block text-sm text-tinta-500">Colonia Tovar</span>
+              </span>
+            </footer>
+          </li>
+
+          <li class="tarjeta-testimonio">
+            <div class="flex gap-1 text-rosa-500" aria-label="5 de 5 estrellas">
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+            </div>
+            <p class="mt-4 text-tinta-700">"Pedí la de chocolate para el cumpleaños de mi hijo y llegó perfecta. Todos preguntaron dónde la compramos."</p>
+            <footer class="mt-5 flex items-center gap-3">
+              <span class="inicial" aria-hidden="true">C</span>
+              <span>
+                <span class="block font-semibold text-tinta-900">Carlos Bermúdez</span>
+                <span class="block text-sm text-tinta-500">Chuao, Caracas</span>
+              </span>
+            </footer>
+          </li>
+
+          <li class="tarjeta-testimonio">
+            <div class="flex gap-1 text-rosa-500" aria-label="5 de 5 estrellas">
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+            </div>
+            <p class="mt-4 text-tinta-700">"La de fresas con chantilly es la favorita de mi familia. Fresas frescas, crema abundantísima y nada empalagosa."</p>
+            <footer class="mt-5 flex items-center gap-3">
+              <span class="inicial" aria-hidden="true">M</span>
+              <span>
+                <span class="block font-semibold text-tinta-900">Maritza Colmenares</span>
+                <span class="block text-sm text-tinta-500">La Guaira</span>
+              </span>
+            </footer>
+          </li>
+
+          <li class="tarjeta-testimonio">
+            <div class="flex gap-1 text-rosa-500" aria-label="5 de 5 estrellas">
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+            </div>
+            <p class="mt-4 text-tinta-700">"La de arequipe es un vicio. Ese caramelo que se lleva para arriba y se queda en el borde del plato... no tiene precio."</p>
+            <footer class="mt-5 flex items-center gap-3">
+              <span class="inicial" aria-hidden="true">J</span>
+              <span>
+                <span class="block font-semibold text-tinta-900">José Manuel Rojas</span>
+                <span class="block text-sm text-tinta-500">Los Teques, Miranda</span>
+              </span>
+            </footer>
+          </li>
+
+          <li class="tarjeta-testimonio">
+            <div class="flex gap-1 text-rosa-500" aria-label="5 de 5 estrellas">
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+            </div>
+            <p class="mt-4 text-tinta-700">"Pedí los postres en vasos para la cena y quedaron hermosos. Además los yogures son excelentes."</p>
+            <footer class="mt-5 flex items-center gap-3">
+              <span class="inicial" aria-hidden="true">A</span>
+              <span>
+                <span class="block font-semibold text-tinta-900">Andrea Salazar</span>
+                <span class="block text-sm text-tinta-500">Valencia</span>
+              </span>
+            </footer>
+          </li>
+
+          <li class="tarjeta-testimonio">
+            <div class="flex gap-1 text-rosa-500" aria-label="5 de 5 estrellas">
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+            </div>
+            <p class="mt-4 text-tinta-700">"Nos encantan los yogures para el desayuno. Le pedimos un pedido grande para la oficina y todo llegó perfecto."</p>
+            <footer class="mt-5 flex items-center gap-3">
+              <span class="inicial" aria-hidden="true">H</span>
+              <span>
+                <span class="block font-semibold text-tinta-900">Familia Hernández</span>
+                <span class="block text-sm text-tinta-500">Barcelona, Anzoátegui</span>
+              </span>
+            </footer>
+          </li>
+        </ul>
+
+        <div class="mt-8 flex items-center justify-center gap-3">
+          <button type="button" class="boton-circular" id="testimonio-anterior" aria-label="Testimonio anterior">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6" /></svg>
+          </button>
+          <div id="puntos-testimonios" class="flex gap-2" role="group" aria-label="Ir al testimonio"></div>
+          <button type="button" class="boton-circular" id="testimonio-siguiente" aria-label="Testimonio siguiente">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6" /></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACTO ============ -->
+  <section id="contacto" class="seccion">
+    <div class="mx-auto max-w-6xl px-5 sm:px-8">
+      <div class="reveal mx-auto max-w-2xl text-center">
+        <p class="etiqueta justify-center">
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+          </svg>
+          Contacto
+        </p>
+        <h2 class="mt-4 font-display text-3xl leading-tight text-tinta-900 sm:text-4xl">Hagamos tu pedido</h2>
+        <p class="mt-4 text-tinta-600">
+          No tenemos local físico: trabajamos con pedidos previos. Escríbenos y te confirmamos
+          disponibilidad, sabor y decoración para tu fecha.
+        </p>
+      </div>
+
+      <div class="mt-12 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12">
+
+        <!-- Datos de contacto -->
+        <div class="reveal space-y-4">
+          <div class="tarjeta-dato">
+            <span class="icono-dato" aria-hidden="true">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+            </span>
+            <div class="min-w-0">
+              <h3 class="font-display text-lg text-tinta-900">WhatsApp</h3>
+              <p class="mt-1 text-sm text-tinta-600">La forma más rápida de hacer tu pedido.</p>
+              <a href="https://wa.me/584123650270?text=Hola%20Beth%20%26%20Ed%20Cake%27s%2C%20quisiera%20hacer%20un%20pedido" target="_blank" rel="noopener" class="mt-2 inline-flex items-center gap-2 font-semibold text-rosa-600 underline decoration-rosa-200 underline-offset-4 transition hover:text-rosa-700">
+                0412 365 0270
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="tarjeta-dato">
+            <span class="icono-dato" aria-hidden="true">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+            </span>
+            <div class="min-w-0">
+              <h3 class="font-display text-lg text-tinta-900">Correo</h3>
+              <p class="mt-1 text-sm text-tinta-600">Para pedidos grandes o preguntas.</p>
+              <div class="mt-2 flex flex-wrap items-center gap-3">
+                <a href="mailto:bethandedcakes@gmail.com?subject=Pedido%20-%20Beth%20%26%20Ed%20Cake's" class="font-semibold text-rosa-600 underline decoration-rosa-200 underline-offset-4 transition hover:text-rosa-700 break-all">bethandedcakes@gmail.com</a>
+                <button type="button" id="copiar-correo" class="boton-copiar" aria-label="Copiar el correo electrónico">Copiar</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="tarjeta-dato">
+            <span class="icono-dato" aria-hidden="true">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" />
+              </svg>
+            </span>
+            <div class="min-w-0">
+              <h3 class="font-display text-lg text-tinta-900">Horario</h3>
+              <dl class="mt-2 space-y-1.5 text-sm">
+                <div class="flex items-baseline justify-between gap-4 border-b border-dashed border-tinta-200 pb-1.5">
+                  <dt class="text-tinta-700">Lunes a viernes</dt>
+                  <dd class="font-medium text-tinta-900">9:00 am – 6:00 pm</dd>
+                </div>
+                <div class="flex items-baseline justify-between gap-4 border-b border-dashed border-tinta-200 pb-1.5">
+                  <dt class="text-tinta-700">Sábados</dt>
+                  <dd class="font-medium text-tinta-900">10:00 am – 4:00 pm</dd>
+                </div>
+                <div class="flex items-baseline justify-between gap-4">
+                  <dt class="text-tinta-700">Domingos</dt>
+                  <dd class="font-medium text-rosa-600">No trabajamos</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+
+          <div class="tarjeta-dato">
+            <span class="icono-dato" aria-hidden="true">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><path d="M17.5 6.5h.01" />
+              </svg>
+            </span>
+            <div class="min-w-0">
+              <h3 class="font-display text-lg text-tinta-900">Instagram</h3>
+              <p class="mt-1 text-sm text-tinta-600">Estamos preparando nuestra cuenta. Muy pronto te avisamos.</p>
+              <span class="mt-2 inline-flex items-center gap-2 rounded-full bg-rosa-100 px-3 py-1 text-xs font-semibold text-rosa-700">Próximamente</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulario -->
+        <div class="reveal reveal-tarde">
+          <form id="formulario-pedido" class="formulario" novalidate>
+            <h3 class="font-display text-2xl text-tinta-900">Cuéntanos qué necesitas</h3>
+            <p class="mt-2 text-sm text-tinta-600">
+              Completa el formulario y se abre WhatsApp con tu pedido listo para enviar.
+            </p>
+
+            <div class="mt-6 grid gap-4 sm:grid-cols-2">
+              <div class="campo">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" autocomplete="name" required aria-describedby="error-nombre" placeholder="¿Cómo te llamas?" />
+                <p class="error-campo" id="error-nombre" hidden>Escribe tu nombre.</p>
+              </div>
+
+              <div class="campo">
+                <label for="telefono">Teléfono <span class="font-normal text-tinta-500">(opcional)</span></label>
+                <input type="tel" id="telefono" name="telefono" autocomplete="tel" placeholder="0412 365 0270" />
+              </div>
+
+              <div class="campo">
+                <label for="fecha">Fecha del pedido</label>
+                <input type="date" id="fecha" name="fecha" required aria-describedby="error-fecha" />
+                <p class="error-campo" id="error-fecha" hidden>Elige la fecha en que lo necesitas.</p>
+              </div>
+
+              <div class="campo">
+                <label for="tipo">Tipo de postre</label>
+                <select id="tipo" name="tipo" required aria-describedby="error-tipo">
+                  <option value="">Elige una opción</option>
+                  <option>Torta tres leches</option>
+                  <option>Torta de chocolate</option>
+                  <option>Torta de arequipe</option>
+                  <option>Torta de fresas con chantilly</option>
+                  <option>Fresas con crema (estilo Colonia Tovar)</option>
+                  <option>Torta de melocotones con crema</option>
+                  <option>Yogures</option>
+                  <option>Postres en vasos</option>
+                  <option>Otro</option>
+                </select>
+                <p class="error-campo" id="error-tipo" hidden>Elige un tipo de postre.</p>
+              </div>
+            </div>
+
+            <div class="campo mt-4">
+              <label for="mensaje">Mensaje <span class="font-normal text-tinta-500">(opcional)</span></label>
+              <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cantidad, tamaño, decoración, sabor..."></textarea>
+            </div>
+
+            <button type="submit" class="boton boton-rosa mt-6 w-full justify-center">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              Enviar pedido por WhatsApp
+            </button>
+
+            <p class="mt-4 text-center text-xs text-tinta-500">
+              También puedes escribirnos directo a
+              <a href="mailto:bethandedcakes@gmail.com" class="font-semibold text-rosa-600 underline decoration-rosa-200 underline-offset-4 hover:text-rosa-700">bethandedcakes@gmail.com</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ PIE ============ -->
+<footer class="pie">
+  <div class="mx-auto flex max-w-6xl flex-col items-center gap-6 px-5 py-10 text-center sm:px-8 md:flex-row md:justify-between md:text-left">
+    <div class="flex items-center gap-3">
+      <img src="assets/img/logo-beth-ed.png" alt="" width="48" height="48" class="h-12 w-12 object-contain" loading="lazy" />
+      <div>
+        <p class="font-display text-lg text-tinta-900">Beth &amp; Ed Cake's</p>
+        <p class="font-script text-lg text-rosa-600">repostería artesanal</p>
+      </div>
+    </div>
+
+    <nav class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-tinta-600" aria-label="Navegación del pie">
+      <a href="#tortas" class="transition hover:text-rosa-600">Tortas</a>
+      <a href="#testimonios" class="transition hover:text-rosa-600">Testimonios</a>
+      <a href="#contacto" class="transition hover:text-rosa-600">Contacto</a>
+      <a href="mailto:bethandedcakes@gmail.com" class="transition hover:text-rosa-600">bethandedcakes@gmail.com</a>
+    </nav>
+
+    <p class="text-sm text-tinta-500">© <span id="anio">2026</span> Beth &amp; Ed Cake's · Repostería artesanal con calor de hogar</p>
+  </div>
+</footer>
+
+<!-- ============ LIGHTBOX ============ -->
+<div id="lupa" class="lupa" hidden>
+  <div class="lupa-fondo" data-cerrar-lupa></div>
+  <div class="lupa-caja" role="dialog" aria-modal="true" aria-labelledby="lupa-titulo">
+    <button type="button" class="boton-circular lupa-cerrar" data-cerrar-lupa aria-label="Cerrar vista ampliada">
+      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
+    </button>
+    <img id="lupa-imagen" alt="" class="lupa-imagen" />
+    <div class="mt-4 text-center">
+      <h3 id="lupa-titulo" class="font-display text-2xl text-tinta-900"></h3>
+      <p id="lupa-detalle" class="mt-1 text-sm text-tinta-600"></p>
+    </div>
+  </div>
+</div>
+
+<!-- Aviso flotante (copiar correo / errores) -->
+<div id="aviso" class="aviso" role="status" aria-live="polite"></div>
+
+<script src="main.js"></script>
+</body>
+</html>

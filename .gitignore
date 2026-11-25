@@ -1,0 +1,13 @@
+# Dependencias de Node (se reinstalan con `npm install`)
+node_modules/
+
+# Archivos temporales de trabajo
+.tmp-candidates/
+.tmp-capturas/
+
+# Sistema operativo / editores
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/

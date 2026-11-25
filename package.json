@@ -1,0 +1,14 @@
+{
+  "name": "beth-and-ed-cakes",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page de Beth & Ed Cake's, repostería artesanal.",
+  "scripts": {
+    "build": "tailwindcss -i ./src/tailwind.css -o ./assets/css/tailwind.css --minify",
+    "dev": "tailwindcss -i ./src/tailwind.css -o ./assets/css/tailwind.css --watch",
+    "serve": "python3 -m http.server 4173"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
