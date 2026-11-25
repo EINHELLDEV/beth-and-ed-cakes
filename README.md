@@ -5,7 +5,13 @@ Es una web informativa: muestra los productos, los horarios y cómo pedir. No ti
 
 ---
 
-## 1. Cómo verlo en tu computador
+## 1. Dónde está el proyecto
+
+- **Repositorio GitHub**: https://github.com/EINHELLDEV/beth-and-ed-cakes (público, rama `main`)
+- **Web publicada**: se activa al conectar el repositorio en Vercel (ver la sección 5)
+
+Para trabajar sobre el código: clona el repositorio o descarga el ZIP del repositorio.
+Si ya tienes el proyecto en tu computador, abre la carpeta `beth-and-ed-cakes`.
 
 No hay nada que instalar ni compilar para ver la web: es HTML, CSS y JavaScript plano.
 
@@ -99,34 +105,34 @@ borra la línea que dice *"Reseñas de muestra…"* para que no se note que eran
 
 Son dos pasos y no necesitas pagar nada.
 
-### Paso 1 — Sube el proyecto a GitHub
+### Paso 1 — GitHub (ya está hecho ✅)
 
-1. Crea una cuenta en [github.com](https://github.com) si no tienes.
-2. En GitHub, botón **New repository** → nombre `beth-and-ed-cakes` → **Public** → **Create repository**.
-3. En tu computador, con la terminal abierta en la carpeta del proyecto:
+El proyecto ya está en https://github.com/EINHELLDEV/beth-and-ed-cakes, con el primer commit listo.
+Desde ahora, cada cambio se sube así, desde la carpeta del proyecto:
 
 ```bash
-cd beth-and-ed-cakes
-git init
 git add .
-git commit -m "Landing page de Beth & Ed Cake's"
-git branch -M main
-git remote add origin https://github.com/TU_USUARIO/beth-and-ed-cakes.git
-git push -u origin main
+git commit -m "Descripción de lo que cambiaste"
+git push
 ```
 
-> Si te pide usuario y contraseña: usa tu usuario de GitHub y un **personal access token**
-> (en GitHub: *Settings → Developer settings → Personal access tokens → Generate new token*).
+> Si es la primera vez en tu computador, configura tu identidad una sola vez:
+> `git config --global user.name "TU USUARIO"` y `git config --global user.email "TU CORREO"`.
+> La forma más cómoda sin terminal es **GitHub Desktop** (gratis): abres la carpeta,
+> escribes el mensaje del commit y le das a *Push to origin*.
 
-### Paso 2 — Conecta Vercel
+### Paso 2 — Conecta Vercel (lo haces tú, son 4 clics)
 
-1. Entra en [vercel.com](https://vercel.com) y crea una cuenta (puedes iniciar sesión con GitHub).
-2. **Add New → Project** → importa el repositorio `beth-and-ed-cakes`.
-3. Vercel detecta solo que es un sitio estático. Deja el **Build Command vacío** y el
-   **Output Directory** en `.` (o `assets` no: la raíz).
-4. Presiona **Deploy**. En menos de un minuto tendrás una URL pública tipo
-   `https://beth-and-ed-cakes.vercel.app`.
-5. Cada vez que hagas `git push`, Vercel publica los cambios automáticamente.
+1. Entra en [vercel.com](https://vercel.com) e inicia sesión con tu cuenta de **GitHub**.
+2. Click en **Add New… → Project**.
+3. Busca el repositorio `beth-and-ed-cakes` y dale **Import**.
+   (Si no aparece, primero entra en *Account Settings → GitHub Apps* y dale acceso al repositorio.)
+4. En *Configure Project* **no cambies nada**: el proyecto ya trae un `vercel.json` con
+   la configuración correcta (sitio estático, sin build). Solo dale **Deploy**.
+
+En menos de un minuto Vercel te da una URL pública tipo
+`https://beth-and-ed-cakes.vercel.app`, y a partir de ahí **cada `git push` publica los
+cambios solo**. También puedes cambiar esa URL desde *Project Settings → Domains*.
 
 ### Dominio propio (opcional)
 En Vercel: *Settings → Domains → Add* y escribe tu dominio. Vercel te dice qué registros DNS
@@ -164,6 +170,7 @@ npm run build    # regenera assets/css/tailwind.css
 - Probados: menú móvil, filtros de la pasarela, lightbox (abrir/cerrar con Escape), carrusel de testimonios,
   validación del formulario y generación del mensaje de WhatsApp.
 - Las 19 imágenes cargan correctamente en ambos tamaños.
+- Código publicado en GitHub y listo para conectar con Vercel.
 
 ---
 
